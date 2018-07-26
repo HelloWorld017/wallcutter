@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Wallcutter</title>
+		<link rel="stylesheet" href="less/index.less">
+	</head>
+
+	<body>
+		<main>
+			<div class="Crop"></div>
+			<aside class="Sidebar">
+				<h1>Wallcutter</h1>
+				<div class="Dropzone">
+					<p>Drag files here or click to upload</p>
+					<input type="file">
+				</div>
+				<button class="Export" onclick="$wallcutter.sendImage()">
+					Export
+				</button>
+			</aside>
+		</main>
+
+		<script src="src/index.js"></script>
+		<script>
+			const {ipcRenderer} = require('electron');
+			$wallcutter.attachListener(ipcRenderer);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "name": "wallcutter",
+  "version": "1.0.0",
+  "description": "A simple electron application to cut wallpaper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron index.js",
+    "watch": "cd app && npm run watch",
+    "build": "cd app && npm run build",
+    "dev": "cd app && npm run dev",
+    "package": "electron-packager . wallcutter --overwrite --asar --platform=win32 --arch=ia32 --out=dist --app-bundle-id=wallcutter --helper-bundle-id=wallcutter --version-string.CompanyName=Khinenw --version-string.ProductName=wallcutter --version-string.FileDescription=\"A simple electron application to cut wallpaper\" --version-string.LegalCopyright=\"Copyright (C) 2018 Khinenw. All rights reserved.\" --version-string.ProductVersion=1.0.0 --version-string.FileVersion=1.0.0 --version-string.InternalName=wallcutter --version-string.OriginalFilename=wallcutter --ignore=\"(\\.cache|data|app\\/node_modules|app\\/src|app\\/less)\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HelloWorld017/wallcutter.git"
+  },
+  "keywords": [
+    "Electron",
+    "Wallpaper"
+  ],
+  "author": "Khinenw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HelloWorld017/wallcutter/issues"
+  },
+  "homepage": "https://github.com/HelloWorld017/wallcutter#readme",
+  "dependencies": {
+    "wallpaper": "^3.0.0"
+  },
+  "devDependencies": {
+    "electron": "^2.0.5",
+    "electron-packager": "^12.1.0"
+  }
+}

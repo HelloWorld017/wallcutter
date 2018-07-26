@@ -1,0 +1,96 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	background: #f1f2f3;
+	font-family: 'Roboto Condensed';
+}
+
+main {
+	display: flex;
+	min-height: 100vh;
+}
+
+.Crop {
+	flex: 1;
+
+	&.croppie-container {
+		height: initial;
+		display: flex;
+		flex-direction: column;
+
+		.cr-viewport, .cr-resizer {
+			border: none;
+		}
+
+		input[type="range"] {
+			&::-webkit-slider-thumb {
+				background: #00bcd4;
+				transition: all .4s ease;
+			}
+
+			&:active {
+				&::-webkit-slider-thumb {
+					background: #00acc1;
+					transform: scale(0.6);
+				}
+			}
+		}
+	}
+}
+
+.Sidebar {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	border-left: 1px solid #e1e2e3;
+
+	h1 {
+		padding: 0;
+		margin: 30px;
+		color: #202020;
+		font-weight: 700;
+		font-size: 2.3rem;
+	}
+}
+
+.Dropzone {
+	width: 300px;
+	height: 200px;
+	border: 4px dashed #00bcd4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all .4s ease;
+	margin: 30px;
+	cursor: pointer;
+
+	&--active {
+		background: #00bcd4;
+		color: #fff;
+	}
+
+	input {
+		display: none;
+	}
+}
+
+.Export {
+	display: block;
+	border: none;
+	color: #fff;
+	background: #00bcd4;
+	font-family: 'Roboto Condensed';
+	font-size: 1.2rem;
+	outline: none;
+	cursor: pointer;
+	padding: 10px;
+	margin: 30px;
+
+	&:active {
+		background: #00acc1;
+	}
+}
+
+::selection {
+	background: transparent;
+}
